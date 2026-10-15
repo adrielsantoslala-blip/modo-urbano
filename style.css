@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --blue-main: #3a86ff;
+    --blue-light: #e8f1f5;
+    --blue-soft: #8ecae6;
+    --dark-urban: #1d2d44;
+    --light-bg: #f8fafc;
+    --accent: #219ebc;
+    --border: #cbd5e1;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+    background: var(--light-bg);
+    color: var(--dark-urban);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* CABEÇALHO */
+.header {
+    height: 78px;
+    background: var(--dark-urban);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    color: var(--blue-soft);
+    margin-top: -5px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav a {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: var(--blue-soft);
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* TEXTOS */
+h1, h2 {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    line-height: 1.05;
+}
+
+.eyebrow {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: var(--blue-main);
+    margin-bottom: 12px;
+}
+
+/* HOME HERO */
+.hero {
+    min-height: 590px;
+    background: linear-gradient(110deg, #0d1b2a, #1b263b, #415a77);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 70px 10%;
+    gap: 40px;
+}
+
+.hero-content {
+    max-width: 650px;
+    flex: 1;
+}
+
+.hero .eyebrow {
+    color: var(--blue-soft);
+}
+
+.hero h1 {
+    font-size: 64px;
+}
+
+.hero h1 span {
+    color: var(--blue-soft);
+}
+
+.hero p:not(.eyebrow) {
+    font-size: 17px;
+    max-width: 560px;
+    margin: 25px 0 30px;
+    color: #eeeeee;
+}
+
+.hero-img {
+    margin-left: auto;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-img img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* BOTÕES */
+.btn {
+    display: inline-block;
+    border: none;
+    background: var(--blue-main);
+    color: white;
+    padding: 14px 26px;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    background: #2563eb;
+}
+
+.btn-light {
+    background: var(--blue-light);
+    color: var(--dark-urban);
+}
+
+/* SEÇÕES */
+.section {
+    padding: 80px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h1,
+.section-title h2 {
+    font-size: 48px;
+}
+
+.section-title p:last-child {
+    margin-top: 12px;
+    color: #64748b;
+}
+
+/* CATEGORIAS */
+.categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.category {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 8px;
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(58, 134, 255, 0.15);
+}
+
+.category-img {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--blue-light);
+}
+
+.category-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category h3 {
+    font-size: 21px;
+    margin: 10px 0 5px;
+}
+
+.category p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* BANNER */
+.banner {
+    margin: 0 8% 80px;
+    padding: 55px 7%;
+    background: var(--dark-urban);
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.banner h2 {
+    font-size: 40px;
+    max-width: 650px;
+}
+
+.banner p:not(.eyebrow) {
+    max-width: 650px;
+    color: #cbd5e1;
+    margin-top: 12px;
+}
+
+/* PÁGINAS */
+.page {
+    padding: 75px 8%;
+    min-height: calc(100vh - 150px);
+}
+
+/* FILTROS */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.filter {
+    padding: 10px 20px;
+    border: 1px solid var(--border);
+    background: white;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.filter.active,
+.filter:hover {
+    background: var(--blue-main);
+    color: white;
+}
+
+/* PRODUTOS */
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.product {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.product-img {
+    height: 220px;
+    background: var(--blue-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 18px;
+}
+
+.product-info h3 {
+    font-size: 16px;
+}
+
+.product-info p {
+    color: #64748b;
+    font-size: 12px;
+    margin: 5px 0 12px;
+}
+
+.price {
+    font-weight: 800;
+    font-size: 19px;
+    color: var(--blue-main);
+    margin-bottom: 14px;
+}
+
+.add {
+    width: 100%;
+}
+
+/* CONTATO */
+.contact-grid {
+    max-width: 950px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contact-info {
+    background: var(--dark-urban);
+    color: white;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.contact-info h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin: 15px 0;
+    color: #cbd5e1;
+}
+
+.form {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 35px;
+    border-radius: 8px;
+}
+
+.form label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    margin-top: 7px;
+    font-family: inherit;
+}
+
+.form textarea {
+    resize: vertical;
+}
+
+.form .btn {
+    width: 100%;
+}
+
+/* RODAPÉ */
+footer {
+    background: var(--dark-urban);
+    color: #94a3b8;
+    padding: 28px 8%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 850px) {
+    .header {
+        padding: 0 5%;
+    }
+    .menu-btn {
+        display: block;
+    }
+    nav {
+        display: none;
+        position: absolute;
+        top: 78px;
+        left: 0;
+        right: 0;
+        background: var(--dark-urban);
+        padding: 20px 5%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+    nav.open {
+        display: flex;
+    }
+    .hero {
+        padding: 55px 7%;
+        flex-direction: column;
+    }
+    .hero-img {
+        margin: auto;
+    }
+    .hero h1 {
+        font-size: 48px;
+    }
+    .categories {
+        grid-template-columns: 1fr;
+    }
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    .banner {
+        margin: 0 5% 60px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .section {
+        padding: 60px 5%;
+    }
+    .page {
+        padding: 55px 5%;
+    }
+}
+
+@media (max-width: 520px) {
+    .hero-img {
+        display: none;
+    }
+    .products {
+        grid-template-columns: 1fr;
+    }
+    .section-title h1,
+    .section-title h2 {
+        font-size: 38px;
+    }
+    footer {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
