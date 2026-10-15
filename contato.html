@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato — Modo Urbano</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">
+            MODO
+            <span>URBANO</span>
+        </a>
+
+        <button class="menu-btn" id="menuBtn">☰</button>
+
+        <nav id="nav">
+            <a href="index.html">Início</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <main class="page">
+        <section class="section-title">
+            <p class="eyebrow">FALE COM A GENTE</p>
+            <h1>Entre em contato</h1>
+            <p>Dúvidas sobre nossas peças? Mande uma mensagem.</p>
+        </section>
+
+        <section class="contact-grid">
+            <div class="contact-info">
+                <h2>Modo Urbano</h2>
+                <p>Atendimento especializado em moda streetwear.</p>
+                <p>📱 (19) 9968-80485</p>
+                <p>✉️ modourbano@gmail.com</p>
+                <p>📍 Louveira — SP</p>
+            </div>
+
+            <form id="contactForm" class="form" action="enviar_contato.php" method="POST">
+                <label>
+                    Nome
+                    <input type="text" name="nome" placeholder="Seu nome" required>
+                </label>
+
+                <label>
+                    E-mail
+                    <input type="email" name="email" placeholder="seuemail@email.com" required>
+                </label>
+
+                <label>
+                    Mensagem
+                    <textarea name="mensagem" rows="6" placeholder="Digite sua mensagem" required></textarea>
+                </label>
+
+                <button type="submit" class="btn">Enviar mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Modo Urbano</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('status') === 'sucesso') {
+            alert('Mensagem enviada com sucesso!');
+        }
+    </script>
+</body>
+</html>
